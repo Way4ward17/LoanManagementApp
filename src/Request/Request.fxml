@@ -29,12 +29,12 @@
                      <children>
                         <TableView fx:id="table" layoutX="-2.0" layoutY="86.0" prefHeight="424.0" prefWidth="1218.0">
                           <columns>
-                            <TableColumn fx:id="idTable" prefWidth="50.0" text="ID" />
-                            <TableColumn fx:id="surnameTable" prefWidth="211.0" text="SURNAME" />
-                              <TableColumn fx:id="phonenumberTable" prefWidth="169.0" text="PHONE NUMBER" />
-                              <TableColumn fx:id="statusTable" prefWidth="191.0" text="STATUS" />
-                              <TableColumn fx:id="balanceTable" prefWidth="287.0" text="BALANCE" />
-                              <TableColumn fx:id="dueTable" prefWidth="309.0" text="DUE DATE" />
+                            <TableColumn fx:id="idTable" prefWidth="233.99998664855957" text="ID" />
+                            <TableColumn fx:id="surnameTable" prefWidth="228.99998474121094" text="SURNAME" />
+                              <TableColumn fx:id="phonenumberTable" prefWidth="175.0" text="PHONE NUMBER" />
+                              <TableColumn fx:id="statusTable" prefWidth="167.0" text="STATUS" />
+                              <TableColumn fx:id="balanceTable" prefWidth="195.0" text="BALANCE" />
+                              <TableColumn fx:id="dueTable" prefWidth="217.0" text="DUE DATE" />
                           </columns>
                         </TableView>
                         <TextField fx:id="searchfield" layoutX="15.0" layoutY="28.0" prefHeight="37.0" prefWidth="313.0" promptText="       Search" style="-fx-background-radius: 20; -fx-border-radius: 20;">

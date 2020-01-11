@@ -119,7 +119,7 @@ PreparedStatement pstmt;
        pstmt.setString(1, acctNo.getText());
         rs = pstmt.executeQuery();
         while(rs.next()){
-           data.add(new LoadRefund(rs.getInt(1),rs.getString(9),rs.getString(4),rs.getString(8)));
+           data.add(new LoadRefund(rs.getInt(1),rs.getString(8),rs.getString(3),rs.getString(7)));
         }
     }catch (SQLException ex) {
         Logger.getLogger(RefundController.class.getName()).log(Level.SEVERE, null, ex);
@@ -136,9 +136,9 @@ PreparedStatement pstmt;
   
        private void setCellTable1(){
         id.setCellValueFactory(new PropertyValueFactory<>("id"));
-        date.setCellValueFactory(new PropertyValueFactory<>("name"));
-        amount.setCellValueFactory(new PropertyValueFactory<>("number"));
-        depositor.setCellValueFactory(new PropertyValueFactory<>("date"));
+        date.setCellValueFactory(new PropertyValueFactory<>("date"));
+        amount.setCellValueFactory(new PropertyValueFactory<>("balance"));
+        depositor.setCellValueFactory(new PropertyValueFactory<>("depositor"));
       
         
        }

@@ -92,7 +92,7 @@ surname.setText(name);
         pstmt.setString(1, surname.getText());
         rs = pstmt.executeQuery();
         while(rs.next()){
-           data.add(new LoadPhone(rs.getInt(1),rs.getString(3),rs.getString(7) ,rs.getString(17)));
+           data.add(new LoadPhone(rs.getInt(21),rs.getString(3),rs.getString(7) ,rs.getString(17)));
         }
     }catch (SQLException ex) {
         Logger.getLogger(PhoneController.class.getName()).log(Level.SEVERE, null, ex);

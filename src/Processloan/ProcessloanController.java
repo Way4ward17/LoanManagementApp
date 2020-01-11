@@ -10,6 +10,8 @@ import ViewJob.JobController;
 import Viewfamily.FamilyController;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDatePicker;
+import com.jfoenix.controls.JFXDialog;
+import com.jfoenix.controls.JFXDialogLayout;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -29,6 +31,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.web.WebEngine;
@@ -102,6 +105,8 @@ ResultSet rs;
     private Label convertToYears;
     @FXML
     private JFXDatePicker endDate;
+    @FXML
+    private StackPane stick;
     /**
      * Initializes the controller class.
      */
@@ -113,6 +118,7 @@ ResultSet rs;
        getJob();
            getSurname();
         moveAnchorPane();
+        stick.setVisible(false);
     }    
       public static Stage getPrimaryStage() {
 	        return primaryStageObj;
@@ -335,6 +341,23 @@ private void getPhonenumber(){
        try{
        pstmt = conn.prepareStatement(sql);
        pstmt.executeUpdate();
+       
+       stick.setVisible(true);
+          JFXDialogLayout content =  new JFXDialogLayout();
+  content.setHeading(new Text("Success")); // Header of the Dialog
+  content.setBody(new Text("REQUEST SUBMITTED  \n Please Wait Patiently for Approval")); // Text in the dialog
+  JFXDialog dialog = new JFXDialog(stick, content,JFXDialog.DialogTransition.CENTER);
+  JFXButton btn = new JFXButton("Close"); // Button to close Dialog
+
+  btn.setOnAction((ActionEvent event1) -> {
+      dialog.close();
+      stick.setVisible(false);
+  
+            });
+  content.setActions(btn);
+     
+     dialog.show();
+       
        }catch(Exception e){
            System.out.println(e);
        }

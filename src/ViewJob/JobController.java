@@ -91,7 +91,7 @@ private ObservableList<LoadJob> data = FXCollections.observableArrayList() ;
         pstmt.setString(1, surname.getText());
         rs = pstmt.executeQuery();
         while(rs.next()){
-           data.add(new LoadJob(rs.getInt(1),rs.getString(3),rs.getString(7) ,rs.getString(17)));
+           data.add(new LoadJob(rs.getInt(21),rs.getString(3),rs.getString(7) ,rs.getString(17)));
         }
     }catch (SQLException ex) {
         Logger.getLogger(JobController.class.getName()).log(Level.SEVERE, null, ex);

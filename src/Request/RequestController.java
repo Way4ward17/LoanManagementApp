@@ -172,7 +172,7 @@ ResultSet rs;
       //  pstmt.setString(1, surname.getText());
         rs = pstmt.executeQuery();
         while(rs.next()){
-           data.add(new LoadRequestTable(rs.getInt(1),rs.getString(3),rs.getString(7),rs.getString(20) ,rs.getString(21),rs.getString(19)));
+           data.add(new LoadRequestTable(rs.getInt(19),rs.getString(15),rs.getString(6),rs.getString(18) ,rs.getString(21),rs.getString(17)));
         }
     }catch (SQLException ex) {
         Logger.getLogger(FetchController.class.getName()).log(Level.SEVERE, null, ex);
