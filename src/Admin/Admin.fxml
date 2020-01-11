@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="486.0" prefWidth="938.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.AdminController">
+   <children>
+      <JFXTabPane prefHeight="486.0" prefWidth="938.0">
+         <tabs>
+            <Tab text="View Loans">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutY="81.0" prefHeight="370.0" prefWidth="938.0">
+                          <columns>
+                            <TableColumn prefWidth="273.0" text="Fullname" />
+                            <TableColumn prefWidth="167.0" text="Loan" />
+                              <TableColumn prefWidth="221.0" text="Balance" />
+                              <TableColumn prefWidth="276.0" text="Staff ID" />
+                          </columns>
+                        </TableView>
+                        <Button layoutX="844.0" layoutY="24.0" mnemonicParsing="false" text="Delete">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Button>
+                        <TextField layoutX="548.0" layoutY="21.0" prefHeight="29.0" prefWidth="273.0" promptText="Staff ID" />
+                        <AnchorPane fx:id="block1" layoutY="-7.0" prefHeight="458.0" prefWidth="938.0" style="-fx-background-color: GREY;">
+                           <children>
+                              <StackPane fx:id="stick1" layoutX="251.0" layoutY="177.0" prefHeight="98.0" prefWidth="480.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Approve Loans">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView layoutY="108.0" prefHeight="344.0" prefWidth="938.0">
+                           <columns>
+                              <TableColumn prefWidth="273.0" text="Fullname" />
+                              <TableColumn prefWidth="203.0" text="Loan" />
+                              <TableColumn prefWidth="252.0" text="Staff ID" />
+                              <TableColumn prefWidth="209.0" text="Status" />
+                           </columns>
+                        </TableView>
+                        <AnchorPane fx:id="block2" layoutX="-5.0" layoutY="-1.0" prefHeight="452.0" prefWidth="944.0" style="-fx-background-color: GREY;">
+                           <children>
+                              <StackPane fx:id="stick2" layoutX="251.0" layoutY="177.0" prefHeight="98.0" prefWidth="480.0" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+   </children>
+</AnchorPane>

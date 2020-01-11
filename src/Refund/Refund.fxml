@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="542.0" prefWidth="1218.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Refund.RefundController">
+   <children>
+      <ImageView fitHeight="542.0" fitWidth="1218.0" layoutX="1.0" layoutY="-2.0" opacity="0.37" pickOnBounds="true" smooth="false">
+         <image>
+            <Image url="@../images/back.PNG" />
+         </image>
+      </ImageView>
+      <Label layoutX="484.0" layoutY="36.0" text="REFUND LOAN SECTION">
+         <font>
+            <Font name="Consolas" size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="searchid" layoutX="35.0" layoutY="40.0" prefHeight="38.0" prefWidth="253.0" promptText="Enter customer id" style="-fx-border-color: black;" />
+      <JFXButton layoutX="302.0" layoutY="46.0" onAction="#searchbutton" prefHeight="25.0" prefWidth="89.0" style="-fx-background-color: green;" text="Search" textFill="WHITE" />
+      <AnchorPane layoutX="24.0" layoutY="127.0" prefHeight="334.0" prefWidth="424.0" styleClass="card" stylesheets="@../loanmanagementapp/Styles.css">
+         <children>
+            <Label fx:id="fullname" layoutX="121.0" layoutY="80.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="loanamount" layoutX="120.0" layoutY="118.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="85.0" text="Name:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="122.0" text="Loan Amount:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="161.0" text="Phone No.:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="phonenumber" layoutX="123.0" layoutY="158.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="203.0" text="Last Pay Date:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lastpaydate" layoutX="124.0" layoutY="200.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="246.0" text="Balance:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="balance" layoutX="124.0" layoutY="244.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="284.0" text="Per Pay:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="perpay" layoutX="123.0" layoutY="281.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="16.0" layoutY="45.0" text="Account No:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="acctNo" layoutX="122.0" layoutY="45.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="794.0" layoutY="128.0" prefHeight="404.0" prefWidth="416.0" styleClass="card" stylesheets="@../loanmanagementapp/Styles.css">
+         <children>
+            <TableView fx:id="table" layoutY="-1.0" prefHeight="404.0" prefWidth="416.0">
+              <columns>
+                <TableColumn fx:id="id" prefWidth="35.0" text="Id" />
+                <TableColumn fx:id="date" prefWidth="123.0" text="Date" />
+                  <TableColumn fx:id="amount" prefWidth="67.0" text="Amount" />
+                  <TableColumn fx:id="depositor" prefWidth="190.0" text="Depositor" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <Label layoutX="915.0" layoutY="93.0" text="Transaction History">
+         <font>
+            <Font name="Corbel Bold" size="19.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="452.0" layoutY="127.0" prefHeight="334.0" prefWidth="334.0" styleClass="card" stylesheets="@../loanmanagementapp/Styles.css">
+         <children>
+            <TextField fx:id="depositorName" layoutX="23.0" layoutY="24.0" prefHeight="38.0" prefWidth="289.0" promptText="Depositior name" />
+            <TextField fx:id="Amount" layoutX="23.0" layoutY="70.0" prefHeight="38.0" prefWidth="289.0" promptText="Amount" />
+            <JFXButton layoutX="92.0" layoutY="184.0" onAction="#depositAction" prefHeight="38.0" prefWidth="150.0" style="-fx-background-color: green;" text="Deposit" textFill="WHITE" />
+            <JFXDatePicker fx:id="dateDeposit" layoutX="23.0" layoutY="124.0" prefHeight="38.0" prefWidth="289.0" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="81.0" layoutY="93.0" text="Persoanal Information">
+         <font>
+            <Font name="Corbel Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="568.0" layoutY="94.0" text="Deposit">
+         <font>
+            <Font name="Corbel Bold" size="19.0" />
+         </font>
+      </Label>
+      <JFXButton layoutX="1151.0" layoutY="94.0" onAction="#clearTable" prefHeight="25.0" prefWidth="57.0" style="-fx-background-color: red;" text="clear" textFill="WHITE" />
+   </children>
+</AnchorPane>

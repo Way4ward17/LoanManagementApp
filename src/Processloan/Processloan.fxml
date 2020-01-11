@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="588.0" prefWidth="1317.0" style="-fx-border-color: black; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Processloan.ProcessloanController">
+   <children>
+      <AnchorPane layoutX="5.0" layoutY="80.0" prefHeight="165.0" prefWidth="466.0" style="-fx-border-color: black;" styleClass="card1" stylesheets="@../loanmanagementapp/main.css">
+         <children>
+            <Text fx:id="surname" layoutX="119.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adefuwa">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text fx:id="number" layoutX="119.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="09091458969">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text fx:id="occupation" layoutX="118.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developer">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text fx:id="amount" layoutX="119.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="69000">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text layoutX="19.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loan Spread  Sheet">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Separator layoutX="18.0" layoutY="31.0" prefWidth="200.0" style="-fx-background-color: black;" />
+            <WebView fx:id="webView" layoutX="327.0" layoutY="12.0" prefHeight="46.0" prefWidth="46.0" />
+            <Text fx:id="amount1" layoutX="119.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="150000">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+            <Text fx:id="surname1" layoutX="19.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Surname:">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text fx:id="number1" layoutX="19.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phonenumber:">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text fx:id="occupation1" layoutX="18.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Job:">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text fx:id="amount2" layoutX="19.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salary:">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+            <Text fx:id="amount11" layoutX="19.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loan Amount:">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="483.0" layoutY="82.0" prefHeight="306.0" prefWidth="380.0" style="-fx-border-color: black;" styleClass="card1" stylesheets="@../loanmanagementapp/main.css">
+         <children>
+            <Text layoutX="27.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Compute Loan">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Separator layoutX="27.0" layoutY="34.0" prefHeight="3.0" prefWidth="106.0" style="-fx-background-color: black;" />
+            <TextField fx:id="yearToPay" layoutX="20.0" layoutY="56.0" onKeyReleased="#onKeyReleasedPayment" prefHeight="31.0" prefWidth="135.0" promptText="Year Of Payment" />
+            <Text layoutX="243.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="N">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text fx:id="output" layoutX="259.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="166.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Per Month">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+            <Label fx:id="salaryStatus" layoutX="27.0" layoutY="117.0" prefHeight="17.0" prefWidth="329.0" />
+            <Label fx:id="differences" layoutX="28.0" layoutY="169.0" prefHeight="17.0" prefWidth="317.0" />
+            <Label fx:id="convertToYears" layoutX="30.0" layoutY="214.0" style="-fx-font-size: 15;" />
+            <JFXDatePicker fx:id="endDate" layoutX="22.0" layoutY="244.0" prefHeight="31.0" prefWidth="271.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="5.0" layoutY="274.0" prefHeight="283.0" prefWidth="466.0" style="-fx-border-color: black;" styleClass="card1" stylesheets="@../loanmanagementapp/main.css">
+         <children>
+            <Text layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Warning">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Separator layoutX="14.0" layoutY="41.0" prefWidth="200.0" style="-fx-background-color: black;" />
+            <Text fx:id="outStanding" layoutX="11.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="371.9999767243862">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="developerOL" layoutX="14.0" layoutY="153.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <JFXButton layoutX="392.0" layoutY="50.0" onAction="#viewFamily" style="-fx-background-color: green;" text="&gt;&gt;" textFill="WHITE" />
+            <JFXButton layoutX="391.0" layoutY="132.0" onAction="#viewDeveloper" style="-fx-background-color: green;" text="&gt;&gt;" textFill="WHITE" />
+            <Text fx:id="a" layoutX="14.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="warningNumber" layoutX="130.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="b" layoutX="14.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="316.74267578125">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <JFXButton layoutX="391.0" layoutY="210.0" onAction="#viewPhoneNumber" style="-fx-background-color: green;" text="&gt;&gt;" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="486.0" layoutY="409.0" prefHeight="148.0" prefWidth="380.0" style="-fx-border-color: black;" styleClass="card1" stylesheets="@../loanmanagementapp/main.css">
+         <children>
+            <Text layoutX="20.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loan Status">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Separator layoutX="20.0" layoutY="32.0" prefHeight="3.0" prefWidth="106.0" style="-fx-background-color: black;" />
+            <Text fx:id="loanStatus" fill="#289a08" layoutX="20.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adefuwa can be granted a loan">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <JFXButton layoutX="32.0" layoutY="81.0" onAction="#grantAction" prefHeight="32.0" prefWidth="119.0" style="-fx-background-color: green;" text="Grant" textFill="WHITE" />
+            <JFXButton layoutX="243.0" layoutY="81.0" onAction="#declineAction" prefHeight="32.0" prefWidth="104.0" style="-fx-background-color: red;" text="Decline" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="886.0" layoutY="82.0" prefHeight="474.0" prefWidth="398.0" style="-fx-border-color: black;" styleClass="card1" stylesheets="@../loanmanagementapp/main.css">
+         <children>
+            <Text layoutX="27.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Information">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Text>
+            <Separator layoutX="27.0" layoutY="34.0" prefHeight="3.0" prefWidth="106.0" style="-fx-background-color: black;" />
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="54.0" prefWidth="1317.0" style="-fx-background-color: black;">
+         <children>
+            <Text fill="WHITE" layoutX="483.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loan Granting Section" wrappingWidth="289.82568359375">
+               <font>
+                  <Font name="Berlin Sans FB Bold" size="27.0" />
+               </font>
+            </Text>
+            <JFXButton fx:id="closeButton" layoutX="1243.0" layoutY="11.0" onAction="#close" style="-fx-background-color: red;" text="Close" textFill="WHITE" />
+            <JFXButton contentDisplay="RIGHT" layoutX="17.0" layoutY="13.0" onAction="#fetchAll" prefHeight="32.0" prefWidth="95.0" style="-fx-border-color: white;" text="Fetch" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/icons8_Download_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
